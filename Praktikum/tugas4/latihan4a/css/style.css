@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.containe {
+    width: 850px;
+    margin: auto;
+}
+
+.p {
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+div .ada {
+    width: 130px;
+    text-align: center;
+    padding: 5px 10px ;
+    background-color: rgba(250, 39, 239, 0.1);
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 40px;
+    cursor:grab;
+}
+
+div .tidak {
+    width: 130px;
+    text-align: center;
+    padding: 5px 10px ;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 40px;
+    cursor:grab;
+}
+
+div .donut {
+    width: 118px;
+    text-align: center;
+    padding: 5px 10px ;
+    background-color: rgba(0, 3, 207, 0.993);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+div .donut:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(39, 140, 255, 0.993), 0px 0px 30px rgba(39, 140, 255, 0.993), 0px 0px 40px rgba(39, 140, 255, 0.993);  
+}
+
+div .bread {
+    width: 118px;
+    text-align: center;
+    padding: 5px 10px ;
+    background-color: rgb(0, 201, 0);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+div .bread:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 255, 64, 0.993), 0px 0px 30px rgba(0, 255, 64, 0.993), 0px 0px 40px rgba(0, 255, 64, 0.993);  
+}
+
+div .pudding {
+    width: 118px;
+    text-align: center;
+    padding: 5px 10px ;
+    background-color: rgb(209, 0, 0);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+div .pudding:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgb(255, 17, 17), 0px 0px 30px rgb(255, 17, 17), 0px 0px 40px rgb(255, 17, 17);  
+}
+
+.pri {
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.sumber {
+    background-color: black;
+    color: white;
+    margin: auto;
+    text-align: center;
+}

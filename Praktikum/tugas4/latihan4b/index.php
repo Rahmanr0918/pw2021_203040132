@@ -1,89 +1,11 @@
 <?php 
-$makanan = [
-    [
-    "Logo"=>"logo.png",
-    "Picture"=>"aa.png",
-    "Status"=>"Available at Store",
-    "p"=>"Cheese John",
-    "Category"=>"Donut",
-    "Price"=>"Rp 10.000"
-    ],
-    [
-    "Logo"=>"logo.png",
-    "Picture"=>"ab.png",
-    "Status"=>"Available at Store",
-    "p"=>"Chocolate John",
-    "Category"=>"Donut",
-    "Price"=>"Rp 8.500"
-    ],
-    [
-    "Logo"=>"logo.png",
-    "Picture"=>"ac.png",
-    "p"=>"Banana Chocolate",
-    "Status"=>"Available at Store",
-    "Category"=>"Donut",
-    "Price"=>"Rp 9.000"
-    ],
-    [
-    "Logo"=>"logo.png",
-    "Picture"=>"ad.png",
-    "p"=>"Donat Ayam Special",
-    "Status"=>"Available at Store",
-    "Category"=>"Donut",
-    "Price"=>"Rp 10.000"
-    ],
-    [
-    "Logo"=>"logo.png",
-    "Picture"=>"ba.png",
-    "p"=>"Roti Bakso Sapi",
-    "Status"=>"Not Available",
-    "Category"=>"Classic Bread",
-    "Price"=>"Rp 11.000"
-    ],
-    [
-    "Logo"=>"logo.png",
-    "Picture"=>"bb.png",
-    "p"=>"Roti Coklat",
-    "Status"=>"Available at Store",
-    "Category"=>"Classic Bread",
-    "Price"=>"Rp 8.500"
-    ],
-    [
-    "Logo"=>"logo.png",
-    "Picture"=>"bc.png",
-    "p"=>"Roti Coklat Susu",
-    "Status"=>"Available at Store",
-    "Category"=>"Classic Bread",
-    "Price"=>"Rp 9.000"
-    ],
-    [
-    "Logo"=>"logo.png",
-    "Picture"=>"bd.png",
-    "p"=>"Roti Kismis",
-    "Status"=>"Available at Store",
-    "Category"=>"Classic Bread",
-    "Price"=>"Rp 8.500"
-    ],
-    [
-    "Logo"=>"logo.png",
-    "Picture"=>"ca.png",
-    "Status"=>"Not Available",
-    "p"=>"Kelapa Pandan <br>Pudding Log",
-    "Category"=>"Pudding",
-    "Price"=>"Rp 22.000"
-    ],
-    [
-    "Logo"=>"logo.png",
-    "Picture"=>"cb.png",
-    "p"=>"Pudding Orange",
-    "Status"=>"Available at Store",
-    "Category"=>"Pudding",
-    "Price"=>"Rp 110.000"
-    ]
-    
-  ];
+// menghubungkan dengan file php lainya
+require 'php/function.php';
 
+// melakukan query
+$makanan = query("SELECT * FROM makanan")
 ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -96,7 +18,7 @@ $makanan = [
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Hello, world!</title>
   </head>
@@ -122,7 +44,7 @@ $makanan = [
     <tr>
     <th scope="row"><?= $i; ?></th>
       <td width="180px"><img src="assets/img/<?= $item["Logo"]; ?>" title="Logo"></td>
-      <td><img src="assets/img/<?=$item["Picture"];?>"><br><p class="p"><?= $item["p"]; ?></p></td>
+      <td><img src="assets/img/<?=$item["Picture"];?>"></td>
       <td>
       <?php if($item["Status"]=="Available at Store") :?>
         <div class="ada"><?= $item["Status"]; ?></div>
@@ -141,7 +63,7 @@ $makanan = [
       <?php endif; ?>
       </td>
 
-      <td class="pri" width="100px"><?= $item["Price"]; ?></td>
+      <td class="pri" width="100px">Rp.<?= $item["Price"]; ?></td>
     </tr>
     <?php $i++ ?>
     <?php endforeach; ?>

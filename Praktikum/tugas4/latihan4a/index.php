@@ -51,10 +51,10 @@ $result = mysqli_query($conn, "SELECT * FROM makanan");
       <td width="180px"><img src="assets/img/<?= $row["Logo"]; ?>" title="Logo"></td>
       <td><img src="assets/img/<?=$row["Picture"];?>"></td>
       <td>
-      <?php if($row["Status"]=="Available at Store") :?>
-        <div class="ada"><?= $row["Status"]; ?></div>
-      <?php elseif($row["Status"]=="Not Available") : ?>
-        <div class="tidak"><?= $row["Status"]; ?></div>
+      <?php if($row["Statuss"]=="Available at Store") :?>
+        <div class="ada"><?= $row["Statuss"]; ?></div>
+      <?php elseif($row["Statuss"]=="Not Available") : ?>
+        <div class="tidak"><?= $row["Statuss"]; ?></div>
         <?php endif; ?>
       </td>
         

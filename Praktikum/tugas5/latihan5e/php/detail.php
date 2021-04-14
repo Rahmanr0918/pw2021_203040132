@@ -30,6 +30,7 @@ $makanan = query("SELECT * FROM makanan WHERE id = $id")[0];
 <div class="container">
 <table class="table table-striped table-dark">
     
+
     <thead>
       <tr>
         <th scope="col">Brand</th>
@@ -44,6 +45,7 @@ $makanan = query("SELECT * FROM makanan WHERE id = $id")[0];
     <td><div class="c"><?= $makanan["Category"]; ?></div></td>
     <td><div class="p">Rp.<?= $makanan["Price"]; ?></div></td>
     </th>
+
 
     <table><a href="../index.php" class="back">Kembali ke Menu</a></table>
     </div> 

@@ -1,11 +1,21 @@
 <?php 
-// menghubungkan dengan file php lainya
-require 'php/function.php';
+// Menghubungkan dengan file php lainnya
+require 'function.php';
 
-// melakukan query
-$makanan = query("SELECT * FROM makanan")
+
+if (isset($_GET['cari'])) {
+  $keyword = $_GET['keyword'];
+  $makanan = query("SELECT * FROM makanan WHERE 
+                  Logo LIKE '%$keyword%' OR Picture LIKE '%$keyword%'
+                  OR Statuss LIKE '%$keyword%' OR Category LIKE '%$keyword%'
+                  OR Price LIKE '%$keyword%'
+                  ");
+} else {
+  // melakukan query
+  $makanan = query("SELECT * FROM makanan");
+}
+
 ?>
-
 
 <!doctype html>
 <html lang="en">
@@ -18,18 +28,35 @@ $makanan = query("SELECT * FROM makanan")
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
 
     <title>Hello, world!</title>
   </head>
   <body>
-  
-  <div class="containe">
+  <div class="add" style="margin:10px 119px; display: flex; justify-content:space-around; padding:20px;">
+    <a href="tambah.php">
+    <button type="button" class="btn btn-outline-secondary">Tambahkan Data</button>
+    </a>
+    <form action="" method="get" style="width: 500px; display:flex;">
+      <input class="form-control" type="text" name="keyword" placeholder="Cari kategori - Donut, Classic Bread, Pudding.." autofocus style="max-width: 400px;">
+      <button type="submit" class="btn btn-info" name="cari" style="min-width: 100px; margin-left:24px;">Cari</button>
+    </form>
+  </div>
+
+  <?php if(empty($makanan)) : ?>
+    <tr>
+      <td colspan="7"><h1>Data tidak ditemukan</h1></td>
+    </tr>
+  <?php else : ?>
+
+  <div class="container">
+
     <table class="table table-striped table-dark">
     
   <thead>
     <tr>
       <th scope="col">No</th>
+      <th scope="col">Opsi</th>
       <th scope="col">Logo</th>
       <th scope="col">Picture</th>
       <th scope="col">Status</th>
@@ -43,9 +70,17 @@ $makanan = query("SELECT * FROM makanan")
   <tbody>
     <tr>
     <th scope="row"><?= $i; ?></th>
-      <td width="180px"><img src="assets/img/<?= $item["Logo"]; ?>" title="Logo"></td>
-      <td><img src="assets/img/<?=$item["Picture"];?>"></td>
+
+    <td>
+        <a href="ubah.php?id=<?= $item['id']?>"><button type="button" class="btn btn-success">Ubah</button></a>
+        <a href="hapus.php?id=<?= $item['id']?>" onclick="return confirm('Apakah anda yakin untuk menghapus data?')"><button type="button" class="btn btn-danger">Hapus</button></a>
+    </td>
+
+      <td width="180px"><img src="../assets/img/<?= $item["Logo"]; ?>" title="Logo"></td>
+    
+      <td><img src="../assets/img/<?= $item["Picture"];?>"></td>
       <td>
+    
       <?php if($item["Statuss"]=="Available at Store") :?>
         <div class="ada"><?= $item["Statuss"]; ?></div>
       <?php elseif($item["Statuss"]=="Not Available") : ?>
@@ -67,7 +102,9 @@ $makanan = query("SELECT * FROM makanan")
     </tr>
     <?php $i++ ?>
     <?php endforeach; ?>
-    
+    <?php endif; ?>
+
+
     <table><div class="sumber"><a href="https://www.hollandbakery.co.id/" target="_blank">https://www.hollandbakery.co.id/</a></div></table>
 
 

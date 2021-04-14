@@ -1,11 +1,11 @@
 <?php 
-// menghubungkan dengan file php lainya
-require 'php/function.php';
+// Menghubungkan dengan file php lainnya
+require 'function.php';
 
 // melakukan query
 $makanan = query("SELECT * FROM makanan")
-?>
 
+?>
 
 <!doctype html>
 <html lang="en">
@@ -18,18 +18,19 @@ $makanan = query("SELECT * FROM makanan")
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
 
     <title>Hello, world!</title>
   </head>
   <body>
   
-  <div class="containe">
+  <div class="container">
     <table class="table table-striped table-dark">
     
   <thead>
     <tr>
       <th scope="col">No</th>
+      <th scope="col">Opsi</th>
       <th scope="col">Logo</th>
       <th scope="col">Picture</th>
       <th scope="col">Status</th>
@@ -43,9 +44,17 @@ $makanan = query("SELECT * FROM makanan")
   <tbody>
     <tr>
     <th scope="row"><?= $i; ?></th>
-      <td width="180px"><img src="assets/img/<?= $item["Logo"]; ?>" title="Logo"></td>
-      <td><img src="assets/img/<?=$item["Picture"];?>"></td>
+
+    <td>
+        <a href=""><button type="button" class="btn btn-success">Ubah</button></a>
+        <a href=""><button type="button" class="btn btn-danger">Hapus</button></a>
+    </td>
+
+      <td width="180px"><img src="../assets/img/<?= $item["Logo"]; ?>" title="Logo"></td>
+    
+      <td><img src="../assets/img/<?=$item["Picture"];?>"></td>
       <td>
+    
       <?php if($item["Statuss"]=="Available at Store") :?>
         <div class="ada"><?= $item["Statuss"]; ?></div>
       <?php elseif($item["Statuss"]=="Not Available") : ?>
@@ -78,3 +87,4 @@ $makanan = query("SELECT * FROM makanan")
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
   </body>
 </html>
+?>

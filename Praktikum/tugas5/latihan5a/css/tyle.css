@@ -1,0 +1,13 @@
+.container {
+    margin-top: 50px;
+}
+a:hover {
+    color:white;
+    text-decoration: none;
+}
+.back {
+    padding: 10px 16px;
+    background-color: blue;
+    border-radius: 16px;
+    color: white;
+}

@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
       <li>
         <label>
           Kepala Staf :
-          <input type="text" name="Kepala Staf" required>
+          <input type="text" name="KepalaStaf" required>
         </label>
       </li>
       <li>

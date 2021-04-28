@@ -22,7 +22,7 @@ $lem = query("SELECT * FROM lembaga WHERE id=$id;");
   <ul>
     <li><img src="img/<?= $lem['Gambar']; ?>" width="150px"></li>
     <li>Tipe Unit :<?= $lem['Unit']; ?></li>
-    <li>Kepala Staf :<?= $lem['Kepala Staf']; ?></li>
+    <li>Kepala Staf :<?= $lem['KepalaStaf']; ?></li>
     <li>Jumlah Personel :<?= $lem['Personel']; ?></li>
     <li>Moto :<?= $lem['Moto']; ?></li>
     <li><a href="">Ubah</a> | <a href="">Hapus</a></li>

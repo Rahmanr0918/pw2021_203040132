@@ -36,7 +36,7 @@ $lembaga = query("SELECT * FROM lembaga");
         <td><?= $i++; ?></td>
         <td><img src="img/<?= $lem['Gambar'] ?> "></td>
         <td><?= $lem['Unit'] ?></td>
-        <td><?= $lem['Kepala Staf'] ?></td>
+        <td><?= $lem['KepalaStaf'] ?></td>
         <td><?= $lem['Personel'] ?></td>
         <td><?= $lem['Moto'] ?></td>
         <td><a href="#">ubah</a> | <a href="#">Hapus</a></td>

@@ -29,7 +29,7 @@ function tambah($data)
 
   $Gambar = htmlspecialchars($data['Gambar']);
   $TipeUnit = htmlspecialchars($data['Unit']);
-  $KepalaStaf = htmlspecialchars($data['Kepala_Staf']);
+  $KepalaStaf = htmlspecialchars($data['KepalaStaf']);
   $JumlahPersonel = htmlspecialchars($data['Personel']);
   $Moto = htmlspecialchars($data['Moto']);
 

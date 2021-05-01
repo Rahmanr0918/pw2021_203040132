@@ -1,9 +1,4 @@
 <?php 
-session_start();
-if(!isset($_SESSION["username"])){
-    header("Location: login.php");
-    exit;
-}
 
 
 // Fungsi untuk melakukan koneksi ke database
@@ -103,7 +98,3 @@ function registrasi($data) {
 
     return mysqli_affected_rows($conn);
 }
-
-?>
-
-

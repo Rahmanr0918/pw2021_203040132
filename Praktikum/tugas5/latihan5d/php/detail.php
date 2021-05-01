@@ -40,7 +40,7 @@ $makanan = query("SELECT * FROM makanan WHERE id = $id")[0];
     </thead>    
     <th>
     <img src="../assets/img/<?= $makanan["Logo"]?>" alt="">
-    <td><div class="s"><?= $makanan["Status"]; ?></div></td>
+    <td><div class="s"><?= $makanan["Statuss"]; ?></div></td>
     <td><div class="c"><?= $makanan["Category"]; ?></div></td>
     <td><div class="p">Rp.<?= $makanan["Price"]; ?></div></td>
     </th>

@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('font/Poppins-Medium.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    font-weight: 500;
+}
+
+.home {
+    background-color: #000;
+}
+
+section {
+    padding: 100px;
+}
+
+.banner {
+    position: relative;
+    min-height: 100vh;
+    background-image: url(img/orang.jpg);
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner h2 {
+    position: relative;
+    font-size: 3.5em;
+    color: white;
+    font-weight: 400;
+}
+
+.banner h3 {
+    font-size: 3.3em;
+    color: #fff;
+    font-weight: 700;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    width: 550px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.banner p span {
+    color: #000;
+    background-color: #fff;
+    padding: 0 10px;
+    font-weight: 600;
+}
+
+.btn {
+    position: relative;
+    background: #2196f3;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff;
+}

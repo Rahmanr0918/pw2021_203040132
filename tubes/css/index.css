@@ -1,0 +1,83 @@
+/* font */
+@font-face {
+  font-family: 'poppins';
+  src: url('../../css/font/Poppins-Medium.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins';
+}
+
+.navbar {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown a i {
+  color: black;
+  padding: 8px;
+}
+
+.dropdown .dropdown-menu {
+  background: rgb(11, 113, 197);
+}
+
+.dropdown .dropdown-menu li a {
+  color: #fff;
+}
+
+.dropdown .dropdown-menu li a:hover {
+  color: #111;
+}
+
+.fa-user-circle {
+  font-size: 30px;
+}
+
+.fa-plus-circle,
+.fa-sign-out-alt {
+  filter: invert(1);
+}
+
+
+
+h3 {
+  margin-top: 15px;
+}
+
+.container .row .col-2 .box {
+  padding: 10px;
+  border: 1px solid #222;
+}
+
+.container .row .col-2 .box h6 {
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.box ul {
+  margin-left: -10px;
+}
+
+.box ul li {
+  list-style: none;
+}
+
+.box ul li a {
+  color: #000;
+  text-decoration: none;
+  padding: 6px 0;
+  display: inline-block;
+}
+
+.row .col-10 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row .col-10 .card {
+  margin: 0 10px 10px;
+  width: 200px;
+}

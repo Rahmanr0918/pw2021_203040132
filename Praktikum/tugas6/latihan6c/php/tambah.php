@@ -77,8 +77,8 @@ if (isset($_POST['klik'])) {
             <button type="submit" class="btn btn-outline-success" name="klik">Tambahkan</button>
             <button type="submit" class="btn btn-outline-dark"><a href="../index.php">Kembali</a></button>
           </div>
-
         </div>
+      </div>
     </form>
   </div>
 

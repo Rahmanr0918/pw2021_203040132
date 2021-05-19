@@ -56,7 +56,7 @@ if (isset($_POST['ubah'])) {
 <body>
 
   <div class="container">
-    <div class="alert alert-dark" role="alert" style="width: 1000px;">
+    <div class="alert alert-dark" role="alert">
       <h3>Ubah Data</h3>
     </div>
     <form action="" method="POST" enctype="multipart/form-data">

@@ -41,7 +41,7 @@ body::after {
 }
 
 .container {
-  min-width: 1200px;
+  width: 1200px;
   min-height: 100vh;
   position: relative;
 }
@@ -136,4 +136,43 @@ body::after {
 .container .card .content .box a {
   text-decoration: none;
   color: #000;
+}
+
+
+/* responsive */
+
+@media (max-width:991px) {
+  .container .judul {
+    justify-content: center;
+  }
+
+  .bo {
+    max-width: 400px;
+    margin-left: 70px;
+  }
+
+  .bo .content {
+    margin-top: -30px;
+  }
+
+  .container .card {
+    max-width: 450px;
+    max-height: 400px;
+  }
+
+  .container .card .content {
+    padding: 5px;
+  }
+
+  .container .card .content .box {
+    margin: 10px 10px;
+  }
+
+  .container .card .content .box h3 {
+    font-size: 10px;
+  }
+
+  .container .card .content .box p {
+    font-size: 12px;
+  }
 }

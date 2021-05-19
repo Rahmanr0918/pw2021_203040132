@@ -53,7 +53,7 @@ if (isset($_POST['Cari'])) {
         </ul>
       </div>
 
-      <form class="d-flex" action="" method="POST">
+      <form class="d-flex" action="" method="POST" style="width: 360px;">
         <input class="form-control me-2 keyword" type="text" aria-label="Search" name="keyword" placeholder="Masukan kategori pencarian.." autocomplete="off">
         <button class="btn btn-outline-success" type="submit" name="Cari">Search</button>
       </form>

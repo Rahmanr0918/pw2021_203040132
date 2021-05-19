@@ -37,11 +37,11 @@ $lem = query("SELECT * FROM makanan WHERE id=$id;");
 <body>
 
   <div class="container">
-    <div class="alert alert-dark" role="alert" style="width: 800px;">
+    <div class="alert alert-dark" role="alert">
       <h3>Detail Produk</h3>
     </div>
 
-    <div class="card mb-3" style="max-width: 540px; margin: 60px;">
+    <div class="card mb-3" style="max-width: 540px; margin: 40px;">
       <div class="row g-0">
         <div class="col-md-4">
           <img src="../img/<?= $lem['Picture']; ?>" title="<?= $lem['Nama']; ?>" width="100%">

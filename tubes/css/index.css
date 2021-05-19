@@ -81,3 +81,13 @@ h3 {
   margin: 0 10px 10px;
   width: 200px;
 }
+
+@media (max-width:991px) {
+  .col-2 {
+    display: none;
+  }
+
+  .row .col-10 .card {
+    width: 180px;
+  }
+}

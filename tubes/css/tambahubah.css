@@ -1,3 +1,9 @@
+.alert {
+  width: 1000px;
+
+
+}
+
 .row .col-5 input,
 select {
   display: flex;
@@ -9,4 +15,27 @@ select {
 .row .col-6 img {
   margin-left: 100px;
   width: 200px;
+}
+
+@media (max-width:991px) {
+  .alert {
+    width: 500px;
+  }
+
+  .col-1 {
+    width: 80px;
+  }
+
+  .row .col-5 input[type="file"] {
+    width: 300px;
+  }
+
+  .row .col-5 input {
+    width: 150px;
+  }
+
+  .col-6 {
+    width: 20%;
+    margin-left: -30px;
+  }
 }

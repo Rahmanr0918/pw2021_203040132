@@ -70,7 +70,7 @@ body::after {
   margin-left: 80px;
   position: absolute;
   z-index: 2;
-  margin-top: 189px;
+  margin-top: 150px;
   pointer-events: none;
 }
 

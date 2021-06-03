@@ -23,7 +23,6 @@ if (isset($_GET['cari'])) {
 }
 
 ?>
-
 <!doctype html>
 <html lang="en">
 

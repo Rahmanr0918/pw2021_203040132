@@ -1,8 +1,7 @@
-<?php 
-
-
+<?php
 // Fungsi untuk melakukan koneksi ke database
-function koneksi() {
+function koneksi()
+{
     $conn = mysqli_connect("localhost", "root", "");
     mysqli_select_db($conn, "pw_tubes_203040132");
 
@@ -10,7 +9,8 @@ function koneksi() {
 }
 
 // function untuk melakukan query dan memasukannya kedalam array
-function query($sql) {
+function query($sql)
+{
     $conn = koneksi();
     $result = mysqli_query($conn, "$sql");
     $rows = [];
@@ -21,7 +21,8 @@ function query($sql) {
 }
 
 // fungsi untuk menambahkan data didalam database
-function klik($data) {
+function klik($data)
+{
     $conn = koneksi();
 
     $Logo = htmlspecialchars($data['Logo']);
@@ -33,14 +34,15 @@ function klik($data) {
     $query = "INSERT INTO makanan
                 VALUES
                 ('','$Logo','$Picture','$Status','$Category','$Price')";
-    
+
     mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn);
 }
 
 // fungsi untuk menghapus
-function hapus($id) {
+function hapus($id)
+{
     $conn = koneksi();
     mysqli_query($conn, "DELETE FROM makanan WHERE id = $id");
 
@@ -49,7 +51,8 @@ function hapus($id) {
 
 // fungsi untuk mengubah
 
-function ubah($data) {
+function ubah($data)
+{
     $conn = koneksi();
     $id = $data['id'];
     $id = htmlspecialchars($data['id']);
@@ -67,20 +70,21 @@ function ubah($data) {
                 Category = '$Category',
                 Price = '$Price'
                 WHERE id = $id ";
-    
+
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
 }
 
 // menambahkan fungsi registrasi
-function registrasi($data) {
+function registrasi($data)
+{
     $conn = koneksi();
     $username = strtolower(stripcslashes($data["username"]));
     $password = mysqli_real_escape_string($conn, $data["password"]);
 
     // cek username sudah ada atau tidak
     $result = mysqli_query($conn, "SELECT username FROM user WHERE username = '$username' ");
-    if(mysqli_fetch_assoc($result)) {
+    if (mysqli_fetch_assoc($result)) {
         echo "<script>
             alert('username sudah digunakan');
         </script>";

@@ -16,7 +16,6 @@ function hitungDeterminan($a, $b, $c, $d)
     echo "<b>Determinan dari matriks tersebut adalah " . (($a * $d) - ($b * $c)) . "</b>";
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,9 +1,3 @@
-<!-- 
-    Rahman Ramadan
-    203040132
-    Praktikum Pemrograman Web 13.00
- -->
-
 <!DOCTYPE html>
 <html lang="en">
 

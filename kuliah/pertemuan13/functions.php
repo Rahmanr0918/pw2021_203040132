@@ -1,6 +1,4 @@
 <?php
-
-
 function koneksi()
 {
   return mysqli_connect('localhost', 'root', '', 'pw2021_203040132');

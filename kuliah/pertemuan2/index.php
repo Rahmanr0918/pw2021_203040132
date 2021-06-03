@@ -8,7 +8,6 @@ mempelajari Sintaks PHP
 */
 
 ?>
-
 <?php
 // Pertemuan 2 - PHP Dasar
 // Sintaks PHP
@@ -77,5 +76,5 @@ mempelajari Sintaks PHP
 // $x = 10;
 // var_dump($x < 20 || $x % 2 == 0);
 
-
+echo "Pertemuan 2 Pengenalan sintak php";
 ?>

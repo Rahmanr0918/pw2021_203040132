@@ -1,4 +1,4 @@
-<?php 
+<?php
 /* 
 Rahman Ramadan
 203040132
@@ -7,9 +7,7 @@ Pertemuan 5 - 10 Maret 2021
 mempelajari Array
 */
 ?>
-
-<?php 
-
+<?php
 // array > Variabel yang memiliki banyak nilai
 // Elemen array boleh memiliki tipe data yang beda
 // Pasangan antara key dan value
@@ -37,7 +35,4 @@ $hari[] = "kamis";
 $hari[] = "Jum'at";
 echo "<br>";
 var_dump($hari);
-
-
-
 ?>

@@ -22,10 +22,7 @@ if (isset($_POST['klik'])) {
             </script>";
   }
 }
-
-
 ?>
-
 <!doctype html>
 <html lang="en">
 

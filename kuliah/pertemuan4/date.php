@@ -8,7 +8,6 @@ mempelajari Function
 */
 
 ?>
-
 <?php
 /*  Date
     untuk menampilkan tanggal dengan format tertentu  */

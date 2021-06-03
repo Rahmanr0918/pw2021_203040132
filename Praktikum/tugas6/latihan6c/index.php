@@ -5,8 +5,6 @@ require 'php/function.php';
 // melakukan query
 $makanan = query("SELECT * FROM makanan")
 ?>
-
-
 <!doctype html>
 <html lang="en">
 

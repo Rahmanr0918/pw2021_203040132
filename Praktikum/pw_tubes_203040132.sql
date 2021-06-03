@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 22 Apr 2021 pada 19.08
+-- Waktu pembuatan: 03 Jun 2021 pada 12.31
 -- Versi server: 10.4.16-MariaDB
 -- Versi PHP: 7.4.12
 
@@ -30,27 +30,26 @@ SET time_zone = "+00:00";
 CREATE TABLE `makanan` (
   `id` int(11) NOT NULL,
   `Logo` varchar(50) NOT NULL,
-  `Picture` varchar(50) NOT NULL,
+  `Picture` varchar(100) NOT NULL,
   `Statuss` varchar(50) NOT NULL,
   `Category` varchar(35) NOT NULL,
-  `Price` int(20) NOT NULL
+  `Price` int(20) NOT NULL,
+  `Nama` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `makanan`
 --
 
-INSERT INTO `makanan` (`id`, `Logo`, `Picture`, `Statuss`, `Category`, `Price`) VALUES
-(1, 'logo.png', 'aa.png', 'Available at Store', 'Donut', 10000),
-(2, 'logo.png', 'ab.png', 'Available at Store', 'Donut', 8500),
-(3, 'logo.png', 'ac.png', 'Available at Store', 'Donut', 9000),
-(4, 'logo.png', 'ad.png', 'Available at Store', 'Donut', 10000),
-(5, 'logo.png', 'ba.png', 'Not Available', 'Classic Bread', 11000),
-(6, 'logo.png', 'bb.png', 'Available at Store', 'Classic Bread', 8500),
-(7, 'logo.png', 'bc.png', 'Available at Store', 'Classic Bread', 9000),
-(8, 'logo.png', 'bd.png', 'Available at Store', 'Classic Bread', 8500),
-(9, 'logo.png', 'ca.png', 'Not Available', 'Pudding', 22000),
-(10, 'logo.png', 'cb.png', 'Available at Store', 'Pudding', 110000);
+INSERT INTO `makanan` (`id`, `Logo`, `Picture`, `Statuss`, `Category`, `Price`, `Nama`) VALUES
+(1, 'logo.png', '60a39b2633f8b.png', 'Tersedia', 'Donut', 10000, 'Cheese John'),
+(4, 'logo.png', 'ad.png', 'Tersedia', 'Donut', 10000, 'Donat Ayam Special'),
+(5, 'logo.png', 'ba.png', 'Tersedia', 'Classic Bread', 11000, 'Roti Bakso Sapi'),
+(6, 'logo.png', 'bb.png', 'Habis', 'Classic Bread', 8500, 'Roti Coklat'),
+(7, 'logo.png', 'bc.png', 'Tersedia', 'Classic Bread', 9000, 'Roti Coklat Susu'),
+(8, 'logo.png', 'bd.png', 'Habis', 'Classic Bread', 8500, 'Roti Kismis'),
+(9, 'logo.png', 'ca.png', 'Tersedia', 'Pudding', 2200, 'Kelapa Pandan Pudding'),
+(53, '', '60a498c565303.png', 'Bukan makanan', 'Classic Bread', 0, 'Pejuang');
 
 -- --------------------------------------------------------
 
@@ -61,7 +60,7 @@ INSERT INTO `makanan` (`id`, `Logo`, `Picture`, `Statuss`, `Category`, `Price`) 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -70,7 +69,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`) VALUES
 (11, 'rr', '$2y$10$GuVvrQI6fbOQCF7i4XlY5.adXYvEA/zWpmz3fN6us5E'),
-(12, 'aku', '$2y$10$cZIlTblgeCjimsQuJD5TnOCYiUfIVS80XQNHydrNCXD');
+(12, 'aku', '$2y$10$cZIlTblgeCjimsQuJD5TnOCYiUfIVS80XQNHydrNCXD'),
+(15, 'aman', '$2y$10$XilfFfE/CFAlNUHjJsP3auRE3jIe/eZqjzv.o5pxHMMq/RxQvDig6'),
+(16, 'pp', '$2y$10$OFwNBwCxTlzEltK8Ivy6beCUyVany3SBq1DqRd.EoCwU1BGGgYssy');
 
 --
 -- Indexes for dumped tables
@@ -96,13 +97,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `makanan`
 --
 ALTER TABLE `makanan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
